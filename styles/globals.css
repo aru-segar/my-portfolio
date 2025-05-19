@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 236, 72, 153; /* Pink */
+  --background-end-rgb: 139, 92, 246;   /* Purple */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    fixed;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glassmorphism components */
+.glass {
+  @apply bg-dark-bg-secondary bg-opacity-20 backdrop-blur-lg border border-white/10 shadow-lg;
+}
+
+.glass-card {
+  @apply glass rounded-xl transition-all duration-300 hover:border-dark-accent/40 hover:shadow-dark-accent/20 hover:shadow-lg;
+}
+
+/* Animated text */
+.gradient-text {
+  @apply bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-accent/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-accent/80;
+}
+
+/* Animation delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* Code highlighting */
+code {
+  @apply font-mono text-dark-accent bg-dark-bg-secondary bg-opacity-30 px-1 py-0.5 rounded;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply glass px-6 py-2 rounded-lg font-medium flex items-center gap-2 transition-all duration-300 hover:bg-dark-accent hover:bg-opacity-20 border border-dark-accent/30 hover:border-dark-accent/50;
+}
