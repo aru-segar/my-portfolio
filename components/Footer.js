@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiLinkedin, FiGithub, FiMail, FiInstagram } from 'react-icons/fi'; // ⬅️ Updated here
+import { FiLinkedin, FiGithub, FiMail, FiInstagram } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,22 +9,18 @@ const Footer = () => {
   const socialLinks = [
     { icon: <FiGithub />, href: "https://github.com/aru-segar", label: "GitHub" },
     { icon: <FiLinkedin />, href: "https://linkedin.com/in/aruniga-gnanasegaran", label: "LinkedIn" },
-    { icon: <FiInstagram />, href: "https://instagram.com", label: "Instagram" }, // ⬅️ Replaced Twitter
+    { icon: <FiInstagram />, href: "https://instagram.com", label: "Instagram" },
     { icon: <FiMail />, href: "mailto:arunigagnanasegaran@gmail.com", label: "Email" }
   ];
 
   return (
-    <footer className="bg-dark-bg-secondary relative">
-      {/* Gradient top border */}
-      <div className="h-1 w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"></div>
-
+    <footer className="relative glass rounded-none">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">Aruniga Gnanasegaran</h3>
             <p className="text-dark-text-secondary mb-6 max-w-md">
               Computer Science undergraduate passionate about building impactful software products.
-              Open to internships and tech opportunities where I can grow and contribute.
             </p>
 
             <div className="flex space-x-4">
@@ -62,16 +58,16 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li className="text-dark-text-secondary">Colombo, Sri Lanka</li>
                 <li>
-                  <a 
-                    href="mailto:arunigagnanasegaran@gmail.com" 
+                  <a
+                    href="mailto:arunigagnanasegaran@gmail.com"
                     className="text-dark-text-secondary hover:text-dark-accent transition-colors duration-300"
                   >
                     arunigagnanasegaran@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="tel:+94766022630" 
+                  <a
+                    href="tel:+94766022630"
                     className="text-dark-text-secondary hover:text-dark-accent transition-colors duration-300"
                   >
                     +94 76 602 2630
