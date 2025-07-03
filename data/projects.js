@@ -47,5 +47,13 @@ export const allProjects = [
     image: "/below-water.jpeg",
     githubUrl: "#",
     category: "Frontend"
+  },
+  {
+    title: "PizzaOMS - Order Management System",
+    description: "PizzaOMS is a full-stack pizza ordering system with role-based login for customers and shop owners. Customers can place and track orders, while shop owners can manage orders, ingredients, and pizzas.",
+    tags: ["React", "Express.js", "Node.js", "MySQL"],
+    image: "/order-manager.avif",
+    githubUrl: "https://github.com/aru-segar/order-management-system",
+    category: "Full Stack"
   }
 ];

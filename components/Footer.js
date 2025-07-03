@@ -14,16 +14,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative glass rounded-none">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+    <footer className="relative glass rounded-none w-full">
+      <div className="container mx-auto px-4 sm:px-6 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">Aruniga Gnanasegaran</h3>
             <p className="text-dark-text-secondary mb-6 max-w-md">
               Computer Science undergraduate passionate about building impactful software products.
             </p>
 
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={index}
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h4 className="font-semibold text-dark-accent mb-4">Navigation</h4>
               <ul className="space-y-2">
@@ -60,7 +60,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="mailto:arunigagnanasegaran@gmail.com"
-                    className="text-dark-text-secondary hover:text-dark-accent transition-colors duration-300"
+                    className="text-dark-text-secondary hover:text-dark-accent transition-colors duration-300 break-all"
                   >
                     arunigagnanasegaran@gmail.com
                   </a>
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-dark-border">
+        <div className="mt-10 pt-6 border-t border-dark-border">
           <div className="text-center text-dark-text-secondary text-sm">
             <p>&copy; {currentYear} Aruniga Gnanasegaran. All rights reserved.</p>
           </div>
